@@ -1,4 +1,4 @@
-#include <stdio.hd>
+#include <stdio.h>
 /**
  * main -A scipt that prints a line which puts function
  * Return: 0 (Success)
