@@ -2,23 +2,21 @@
 #include <unistd.h>
 /**
  * main - Entry point
- * Description: printspossible combinations of single digit
- * numbers
- * Return: Always 0 (Success)
+ * Return: Always 0(Succes)
  */
 int main(void)
 {
-        int sing;
+	int sing;
 
-        for (sing = '0'; sing <= '9'; sing++)
-        {
-                putchar(sing);
-                if (sing != '9')
-                {
-                        putchar(',');
-                        putchar(' ');
-                }
-        }
-        putchar('\n');
-        return (0);
+	for (sing = '0'; sing <= '9'; sing++)
+	{
+		putchar(sing);
+		if (sing != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
