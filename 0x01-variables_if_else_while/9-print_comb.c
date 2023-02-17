@@ -1,27 +1,24 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - is entry of program
- *
- * Return: 0(Success)
+ * main - Entry point
+ * Description: printspossible combinations of single digit
+ * numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	/*
-	 * prints all single integers, with comma and space after
-	 * loops through 0-9, prints them,prints comma,print space,
-	 * use only putchar
-	 */
-	int x;
+        int sing;
 
-	for (x = 0 ; x < 10 ; x++)
-	{
-		putchar((x % 10) + '0');
-		if (x == 9)
-		/*continue printing comma and space except if x == 9*/
-			continue;
-		putchar(',');
-		putchar(' ');
-	}
-	putchar('\n');
-	return (0);
+        for (sing = '0'; sing <= '9'; sing++)
+        {
+                putchar(sing);
+                if (sing != '9')
+                {
+                        putchar(',');
+                        putchar(' ');
+                }
+        }
+        putchar('\n');
+        return (0);
 }
