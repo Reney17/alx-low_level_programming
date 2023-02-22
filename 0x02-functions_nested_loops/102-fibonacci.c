@@ -1,44 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Description: prints  possible combination of 2 digit numbers
- * Return: 0
+ * main - Prints first 50 Fibonacci numbers, starting with 1 and 2,
+ *        separated by a comma followed by a space.
+ *        fib's next no. is addition of last two numbers.
+ *
+ *
+ *
+ * Return: 0 if succesful
  */
 int main(void)
 {
-	int num1, num2, num3, num4;
+	int loop;
+	unsigned long f1 = 0, f2 = 1, fib;
 
-	for (num1 = 48; num1 <= 57; num1++)
+	for (loop = 0; loop < 50; loop++)
 	{
-		for (num2 = 48; num2 <= 57; num2++)
-		{
-			for (num3 = 48; num3 <= 57; num3++)
-			{
-				for (num4 = 48; num4 <= 57; num4++)
-				{
-				if (((num3 + num4) > (num1 + num2) &&  num3 >= num1) || num1 < num3)
-				{
-					putchar(num1);
-					putchar(num2);
-					putchar(' ');
-					putchar(num3);
-					putchar(num4);
+		fib = f1 + f2;
+		printf("%lu", fib);
 
-					if (num1 + num2 + num3 + num4 == 227 && num1 == 57)
-					{
-					break;
-					}
-					else
-					{
-					putchar(',');
-					putchar(' ');
-					}
-				}
-				}
-			}
-		}
+		f1 = f2;
+		f2 = fib;
+
+		if (loop == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	putchar('\n');
+
 	return (0);
 }
