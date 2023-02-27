@@ -1,9 +1,8 @@
-julien@ubuntu:~/0x05$ cat 100-main.c
 #include "main.h"
 #include <stdio.h>
 
 /**
- * main - check the code
+ * main - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
@@ -17,9 +16,9 @@ int main(void)
 	printf("%d\n", nb);
 	nb = _atoi("          ------++++++-----+++++--98");
 	printf("%d\n", nb);
-	nb = _atoi("214748364");
+	nb = _atoi("2147483647");
 	printf("%d\n", nb);
-	nb = _atoi("0");
+	nb = _atoi("-2147483648");
 	printf("%d\n", nb);
 	nb = _atoi("Suite 402");
 	printf("%d\n", nb);
@@ -27,5 +26,5 @@ int main(void)
 	printf("%d\n", nb);
 	nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
 	printf("%d\n", nb);
-return (0);
+	return (0);
 }
