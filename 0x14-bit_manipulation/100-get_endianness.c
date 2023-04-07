@@ -9,11 +9,11 @@
 
 int get_endianness(void)
 {
-	int i;
-	char *c;
+	unsigned int test = 1;
+	char *endian = (char *)&test;
 
-	i = 1;
-	c = (char *)&i;
+	if (*endian)
+		return (1);
+	return (0);
 
-	return (*c);
 }
