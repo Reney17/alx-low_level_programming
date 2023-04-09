@@ -2,17 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
-* main - main
-* @argc: number of arguments
-* @argv: a pointer point to the array of arguments
-* Return: Always 0
-**/
-
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 char *create_buffer(char *file);
 void close_file(int fd);
 
@@ -22,6 +11,7 @@ void close_file(int fd);
  *
  * Return: A pointer to the newly-allocated buffer.
  */
+
 char *create_buffer(char *file)
 {
 	char *buffer;
